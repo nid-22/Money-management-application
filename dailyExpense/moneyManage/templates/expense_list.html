@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"> Id</th>
+        <th scope="col">Expense</th>
+        <th scope="col">Expense date</th>
+        <th scope="col">Expense type</th>
+        <th scope="col">description</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in objects %}
+
+      <tr>
+       
+        <td>{{i.id}}</td>
+        <td>
+            {{i.expense}}
+        </td>
+        <td>
+            {{i.expense_date}}
+        </td>
+        <td>
+            {{i.expense_type}}
+        </td>
+        <td>
+            {{i.description}}
+        </td>
+        <td>
+            <a href="">Delete</a>
+        </td>
+        <td>
+            <a href="">Update</a>
+        </td>
+      </tr>   
+      {%endfor%}   
+    </tbody>
+  </table>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h2>{{name}} form</h2>
+
+{% if lmsg is not None%}
+<span style="color: red;">{{lmsg}}</span>
+{% endif %}
+
+{% if expm is not None%}
+<span style="color: red;">{{expm}}</span>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    
+        <div class="mb-3">
+            <label for="income" class="form-label">INCOME</label>
+        {{form.income}}
+        <label for="income" class="form-label">INCOME TYPE</label>
+        {{form.income_type}}
+        <label for="income" class="form-label">DESCRIPTION</label>
+        {{form.description}}
+        <input type="submit" value="save">
+        </div>
+        
+      
+
+  
+</form>
+
+{% endblock content %}

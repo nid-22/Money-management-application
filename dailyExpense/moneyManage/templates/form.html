@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h2>{{name}} form</h2>
+
+{% if lmsg is not None%}
+<span style="color: red;">{{lmsg}}</span>
+{% endif %}
+
+{% if expm is not None%}
+<span style="color: red;">{{expm}}</span>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+        <tr>
+            <td> <input type="submit" value="save"></td>
+        </tr>
+
+    </table>
+</form>
+
+{% endblock content %}

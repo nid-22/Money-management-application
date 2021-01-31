@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .info {
+            color: blue;
+            font-family: fantasy;
+        }
+        
+        .success {
+            color: green;
+            font-family: monospace;
+        }
+        
+        .error {
+            background-color: hotpink;
+            color: khaki;
+        }
+    </style>
+
+</head>
+
+<body>
+    {% if messages %} {% for i in messages %}
+    <h1 class="{{i.tags}}">{{i}}</h1>
+    {%endfor%} {%endif%}
+    <form method="POST">
+        {%csrf_token%}
+        <table cellspacing="10" border="2">
+            <tr>
+                <td>Id</td>
+                <td>
+                    <input type="text" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td>
+                    <input type="text" name="contact">
+                </td>
+
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td>
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <!-- {% if messages %} {% for i in messages %} 
+    <h1 class="{{i.tags}}">{{i}}</h1>
+    {% endif %}{%endfor%} {%endif%} -->
+</body>
+
+</html>

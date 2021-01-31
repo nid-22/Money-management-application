@@ -1,0 +1,128 @@
+{% extends 'index.html' %}
+
+{% block head %}
+  {% load static %}
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="{% static 'owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'owl.theme.default.css' %}">
+  <link rel="stylesheet" href="{% static 'materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style5.css' %}">
+ {% endblock  %}
+
+{% block content %}
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+      <div class="banner" >
+      <div class="container">
+        <h1 class="font-weight-semibold">Daily Expense Management</h1>
+        <h6 class="font-weight-normal text-muted pb-3">Keep tab of your finance</h6>        
+        <img src="{% static '1.jpg' %}" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="container">
+        
+        
+        <section class="case-studies" id="case-studies-section">
+          <div class="row grid-margin">
+            <div class="col-12 text-center pb-5">
+              <h2>What this application can do for you</h2>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in">
+              <div class="card color-cards">
+                <div class="card-body p-0">
+                  <div class="bg-primary text-center card-contents">
+                    <div class="card-image">
+                      <img src="{% static 'Group95.svg' %}" class="case-studies-card-img" alt="">
+                    </div>  
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                      <div>
+                        <h6 class="text-white pb-2 px-3">Keep tab of income and spends</h6>
+                        <button class="btn btn-white">see how</button>
+                      </div>
+                    </div>
+                  </div>   
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">Scrutinize</h6>                     
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card color-cards">
+                <div class="card-body p-0">
+                  <div class="bg-warning text-center card-contents">
+                    <div class="card-image">
+                        <img src="{% static 'Group108.svg' %}" class="case-studies-card-img" alt="">
+                    </div>  
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                      <div>
+                        <h6 class="text-white pb-2 px-3">Calculate daily and monthly savings</h6>
+                        <button class="btn btn-white">See how</button>
+                      </div>
+                    </div>
+                  </div>   
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">Save</h6>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 stretch-card mb-3 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card color-cards">
+                <div class="card-body p-0">
+                  <div class="bg-violet text-center card-contents">
+                    <div class="card-image">
+                        <img src="{% static 'Group126.svg' %}" class="case-studies-card-img" alt="">
+                    </div>  
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                      <div>
+                        <h6 class="text-white pb-2 px-3">suggest savings methods based on your spends</h6>
+                        <button class="btn btn-white">See how</button>
+                      </div>
+                    </div>
+                  </div>   
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">suggest</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 stretch-card" data-aos="zoom-in" data-aos-delay="600">
+              <div class="card color-cards">
+                <div class="card-body p-0">
+                  <div class="bg-success text-center card-contents">
+                    <div class="card-image">
+                        <img src="{% static 'Group115.svg' %}" class="case-studies-card-img" alt="">
+                    </div>  
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                      <div>
+                        <h6 class="text-white pb-2 px-3">Reminders for bills payement</h6>
+                        <button class="btn btn-white">See how</button>
+                      </div>
+                    </div>
+                  </div>   
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">set reminders</h6>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>     
+       
+        
+       
+      </div> 
+    </div>
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="vendors/aos/js/aos.js"></script>
+    <script src="js/landingpage.js"></script>
+  </body>
+
+{% endblock  %}

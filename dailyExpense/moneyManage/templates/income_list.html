@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"> Id</th>
+        <th scope="col">income</th>
+        <th scope="col">income_date</th>
+        <th scope="col">income_type</th>
+        <th scope="col">description</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in objects %}
+
+      <tr>
+       
+        <td>{{i.id}}</td>
+        <td>
+            {{i.income}}
+        </td>
+        <td>
+            {{i.income_date}}
+        </td>
+        <td>
+            {{i.income_type}}
+        </td>
+        <td>
+            {{i.description}}
+        </td>
+        <td>
+            <a href="{% url 'moneyManage:d_income' i.id %}">Delete</a>
+        </td>
+        <td>
+            <a href="{% url 'moneyManage:d_update' i.id %}">Update</a>
+        </td>
+      </tr>   
+      {%endfor%}   
+    </tbody>
+  </table>
+
+{% endblock content %}
